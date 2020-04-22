@@ -48,7 +48,7 @@ if(@$usedata) { ?>
 				</div>
 				<div class="row">
 					<div class="upl_sec">
-						<?php echo form_open_multipart('upload/do_uploaddd');?>
+						<?php echo form_open_multipart('upload/do_upload');?>
 							<label for="uplImg" id="lbl">
 								<img src="<?= base_url(); ?>assets/images/site_img/cmp.png">
 							</label>

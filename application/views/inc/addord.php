@@ -10,10 +10,26 @@
 						</div>
 					</div>
 				<div class="cl2 top30">
-					<img class="img-responsive" src="<?= base_url(); ?>assets/images/site_img/clc.png">
+					<?php echo form_open_multipart('upload/do_upload');?>
+						<label for="uplImg2" id="lbl">
+					         <img class="img-responsive" src="<?= base_url(); ?>assets/images/site_img/clc.png">
+					    </label>
+					    <input type="file" name="ordImg" id="uplImg2" accept="image/*" capture="camera">
+							<div class="uploadSec2">
+								<div align="center">
+									<div class="prevImg">
+										<img id="blahd" src="#" class="img-responsive" alt="your image" />
+										<button class="bnt1">Submit</button><br><br>
+										<span onClick="history.back()" class="cncl">Cancel</span><br><br>
+									</div>
+								</div>
+							</div>
+						</form>
 				</div>
 				<div class="cl2 top30">
-					<img class="img-responsive" src="<?= base_url(); ?>assets/images/site_img/ordd.png">
+					<a href="<?= base_url(); ?>ListOrder">
+					 <img class="img-responsive" src="<?= base_url(); ?>assets/images/site_img/ordd.png">
+					<a href="<?= base_url(); ?>ListOrder">
 				</div>
 		    </div>
 		    <div class="col-md-12">

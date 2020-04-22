@@ -27,7 +27,8 @@
 	    $btnClass = "class='btn btn-danger'";
 	    $btnTxt = "Cancel Order";
 	    	$steps = $rowsOrd->steps;
-	    	if($steps == '1'){ $confr = "class='greens'"; $prc = ""; $ver = "";}
+	    	if($steps == '0'){ $confr = ""; $prc = ""; $ver = ""; }
+	    	elseif($steps == '1'){ $confr = "class='greens'"; $prc = ""; $ver = "";}
 	    	elseif($steps == '2'){$prc = "class='greens'"; $confr ="class='greens'";  $ver = ""; $btnClass="class='btn btn-success'"; $btnTxt = "Invoice";}
 	    	elseif($steps == '3'){$ver = "class='greens'"; $confr ="class='greens'"; $prc = "class='greens'";
 	    	$btnClass="calss='btn btn-success'"; $btnTxt = "Invoice";	}

@@ -210,4 +210,21 @@ class UserModel extends CI_model
 		$q = $this->db->get("orders");
 		return $q;
 	}
+
+	function addOrderImg($userId,$orderId,$image)
+	{
+		$data = array
+					(
+						"order_id"=> $orderId,
+						"user_id" => $userId,
+						"orders"  => "ImageType",
+						"types"   => "imgs",
+						"images"  => $image
+					);
+		$q = $this->db->insert("orders",$data);
+		if($q)
+		{
+			return "succ";
+		}
+	}
 }

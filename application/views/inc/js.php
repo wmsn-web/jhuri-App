@@ -131,10 +131,27 @@
   }
 }
 
+ function readURLD(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blahd').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
     $("#uplImg").change(function(){
       $(".uploadSec").show(200);
       $("body").css("position","fixed");
       readURL(this);
+    });
+    $("#uplImg2").change(function(){
+      $(".uploadSec2").show(200);
+      $("body").css("position","fixed");
+      readURLD(this);
     });
   </script>
   
