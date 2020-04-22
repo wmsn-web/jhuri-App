@@ -153,6 +153,13 @@
       $("body").css("position","fixed");
       readURLD(this);
     });
+
+    $("#subuplBtn").click(function(){
+      $(".subLoder").show();
+    });
+    $("#subuplBtn2").click(function(){
+      $(".subLoder2").show();
+    });
   </script>
   
   

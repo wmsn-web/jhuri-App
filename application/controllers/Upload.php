@@ -17,7 +17,8 @@ class Upload extends CI_Controller {
         public function do_upload()
         {
                 $config['upload_path']          = './uploads/';
-                $config['allowed_types']        = 'gif|jpg|png';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg|JPEG|JPG|PNG';
+                $config['max_size']             = 3000;
                 $config['encrypt_name'] = TRUE;
 
                 $this->load->library('upload', $config);
@@ -26,7 +27,8 @@ class Upload extends CI_Controller {
                 {
                         $error = array('error' => $this->upload->display_errors());
 
-                        print_r($error);
+                        $this->session->set_flashdata("Feed","Invalid Image Select Or Maximum File Size");
+                        return redirect("Home");
 
                         //$this->load->view('upload_form', $error);
                 }

@@ -32,7 +32,7 @@ if(@$usedata) { ?>
 </div>
 <?php } ?>
 <?php } ?>
-
+    
     <div id="pageCont" class="pageCont1">
 		<section class="secbg">
 			<div class="container-fluid">
@@ -57,10 +57,13 @@ if(@$usedata) { ?>
 								<div align="center">
 									<div class="prevImg">
 										<img id="blah" src="#" class="img-responsive" alt="your image" />
-										<button class="bnt1">Submit</button><br><br>
+										<button id="subuplBtn" class="bnt1">Submit</button><br><br>
 										<span onClick="history.back()" class="cncl">Cancel</span><br><br>
 									</div>
 								</div>
+								<div class="subLoder">
+    								<img src="<?= base_url(); ?>assets/images/site_img/loader.gif" class="img-responsive" />
+   								 </div>
 							</div>
 						</form>
 					</div>

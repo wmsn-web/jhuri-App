@@ -19,10 +19,13 @@
 								<div align="center">
 									<div class="prevImg">
 										<img id="blahd" src="#" class="img-responsive" alt="your image" />
-										<button class="bnt1">Submit</button><br><br>
+										<button  id="subuplBtn2" class="bnt1">Submit</button><br><br>
 										<span onClick="history.back()" class="cncl">Cancel</span><br><br>
 									</div>
 								</div>
+								<div class="subLoder2">
+    								<img src="<?= base_url(); ?>assets/images/site_img/loader.gif" class="img-responsive" />
+   								 </div>
 							</div>
 						</form>
 				</div>

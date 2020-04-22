@@ -994,6 +994,30 @@ margin-top: 15px;
 	color: #FE5100;
 }
 
+.subLoder
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	background-color:rgba(0,0,0,0.2);
+	z-index: 999;
+}
+
+.subLoder2
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	background-color:rgba(0,0,0,0.2);
+	z-index: 999;
+}
+
 /*
 @media only screen and (max-height: 568px) {
 	.menuMain ul
