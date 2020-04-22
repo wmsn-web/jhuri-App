@@ -57,7 +57,8 @@ if(@$usedata) { ?>
 								<div align="center">
 									<div class="prevImg">
 										<img id="blah" src="#" class="img-responsive" alt="your image" />
-										<button class="bnt1">Submit</button>
+										<button class="bnt1">Submit</button><br><br>
+										<span onClick="history.back()" class="cncl">Cancel</span><br><br>
 									</div>
 								</div>
 							</div>
