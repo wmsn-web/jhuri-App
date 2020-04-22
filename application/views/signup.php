@@ -1,4 +1,3 @@
-<?php include("fnc.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,10 +24,19 @@
 	    </div>
 	    <div class="container">
 	    	<h1>Signup</h1>
-	    	<form class="logFrom">
+	    	<form class="logFrom" action="<?= base_url(); ?>SignUp/addAcc" method="post">
+	    		<div class="form-group loginp">
+	    			<label>Name</label>
+	    			<input type="text" name="name" class="inpControl" required="required">
+	    		</div>
 	    		<div class="form-group loginp">
 	    			<label>Mobile Number</label>
-	    			<input type="text" name="fname" class="inpControl">
+	    			<input type="text" id="phones" name="phone" class="inpControl" required="required">
+	    		</div>
+	    		<div class="form-group loginp">
+	    			<label>Password</label>
+	    			<input type="password" id="pass_log" name="password" class="inpControl" required="required">
+	    			<span class="showIcon"><i id="eye" class="fas fa-eye-slash"></i></span>
 	    		</div>
 	    		
 	    		<div class="form-group logbtn">
@@ -40,7 +48,14 @@
     	    </form>
 	    </div>
 	</div>
-
+		<div class="flashof">
+			<span class="msg">Do not Use special characters!</span>
+		</div>
+		<?php if($feed=$this->session->flashdata("Feed")){ ?>
+	<div class="flash">
+		<span class="msg"><?= $feed; ?></span>
+	</div>
+<?php } ?>
 	<!---=================Foot Menu==========------------>
 	
 <!--------==================Java script===========---------->
