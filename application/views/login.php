@@ -1,4 +1,3 @@
-<?php include("fnc.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,10 +24,10 @@
 	    </div>
 	    <div class="container">
 	    	<h1>Login</h1>
-	    	<form class="logFrom">
+	    	<form class="logFrom" action="<?= base_url(); ?>Login/signin" method="post">
 	    		<div class="form-group loginp">
 	    			<label>Mobile Number</label>
-	    			<input type="text" name="fname" class="inpControl">
+	    			<input type="text" id="phones"  name="phone" class="inpControl">
 	    		</div>
 	    		<div class="form-group loginp">
 	    			<label>Password</label>
@@ -40,12 +39,16 @@
 	    			<button class="bntSec">Login</button>
 	    		</div>
 	    		<div align="center" class="form-group">
-	    			<p>Don’t have an acoount ? <span class="reg">Sign Up</span></p>
+	    			<p>Don’t have an account ? <span class="reg">Sign Up</span></p>
 	    		</div>
     	    </form>
 	    </div>
 	</div>
-
+<?php if($feed=$this->session->flashdata("Feed")){ ?>
+	<div class="flash">
+		<span class="msg"><?= $feed; ?></span>
+	</div>
+<?php } ?>
 	<!---=================Foot Menu==========------------>
 	
 <!--------==================Java script===========---------->
