@@ -9,7 +9,7 @@
 	<div class="myProfile">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="navicon cl1 bckbtn">
+				<div class="navicon cl1" onClick="history.back()">
 					<img style="width: 25px" src="<?= base_url(); ?>assets/images/site_img/arrow_left.png">
 				</div>
 				<div class="logo cl2">

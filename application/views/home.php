@@ -68,7 +68,9 @@ if(@$usedata) { ?>
 							<img src="<?= base_url(); ?>assets/images/site_img/order_btn.png">
 						</a>
 						<br><br>
-						<img src="<?= base_url(); ?>assets/images/site_img/myorder_btn.png">
+						<a href="<?= base_url(); ?>MyOrders">
+							<img src="<?= base_url(); ?>assets/images/site_img/myorder_btn.png">
+					    </a>
 					</div>
 				</div>
 				<div class="row">

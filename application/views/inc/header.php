@@ -2,7 +2,7 @@
 	<div class="header">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="navicon cl12 nvtoggle">
+				<div class="navicon cl1 nvtoggle">
 					<i id="bars" class="fas fa-bars"></i>
 				</div>
 				<div class="logo cl2">
@@ -26,16 +26,14 @@
 		<div class="row">
 			<div class="cl15 marks">
 				<i class="glyphicon glyphicon-map-marker"></i>
-				<i class="fas fa-truck"></i>
+				
 			</div>
 			<div class="cl75">
 				<ul>
 					<li>
 						Anandapur Main Road, East Kolkata, 100007
 					</li>
-					<li>
-						All Slots full Please try again later
-					</li>
+					
 		        </ul>
 			</div>
 			<div class="cl10 marks-right">
@@ -46,12 +44,17 @@
 	<div class="menuMain">
 		<ul>
 			<li><a href="<?= base_url(); ?>">Home</a></li>
-			<li><a href="<?= base_url(); ?>profile.php">Profile</a></li>
-			<li><a href="<?= base_url(); ?>mycart.php">My Cart</a></li>
+			<li><a href="<?= base_url(); ?>Profile">Profile</a></li>
+			<li><a href="<?= base_url(); ?>Mycart">My Cart</a></li>
 			<li id="catts"><a href="javascript:void(0)">Categories</a></li>
-			<li  id="frmMenu"><a href="javascript:void(0)">My Order</a></li>
+			<li  id="frmMenu"><a href="<?= base_url(); ?>MyOrders">My Order</a></li>
 			<li><a href="javascript:void(0)">Language</a></li>
 			<li><a href="javascript:void(0)">Settings</a></li>
+			<?php if($this->session->userdata("userId")){ ?>
+				<li><a href="SignUp/logout">Logout</a></li>
+		    <?php }else{ ?>
+		    	<li><a href="Login">Login</a></li>
+		    <?php } ?>
 		</ul>
 	</div>
 </div>
