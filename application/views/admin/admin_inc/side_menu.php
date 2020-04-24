@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png"
+    <a href="<?= base_url(); ?>Admin" class="brand-link">
+      <img src="<?= base_url(); ?>dist/img/AdminLTELogo.png"
            alt="AdminLTE Logo"
            class="brand-image img-circle elevation-3"
            style="opacity: .8">
@@ -13,10 +13,10 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url(); ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="admin" class="d-block">Admin</a>
+          <a href="<?= base_url(); ?>Admin" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -37,56 +37,40 @@
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
+              <i class="nav-icon fas fa-folder"></i>
               <p>
-                Post Categories
+                Orders
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
                 <ul class="nav-treeview">
                     <li class="nav-item">
-                        <a href="" class="nav-link">
-                          <i class="nav-icon  fas fa-plus"></i>
-                          <p>Add New</p>
+                        <a href="<?= base_url(); ?>Admin/newOrder" class="nav-link">
+                          <i class="nav-icon  fas fa-file"></i>
+                          <p>New Orders</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
-                          <i class="nav-icon  fas fa-pen"></i>
-                          <p>Edit</p>
+                        <a href="<?= base_url(); ?>Admin/processOrder" class="nav-link">
+                          <i class="nav-icon  fas fa-file"></i>
+                          <p>Order Process</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url(); ?>Admin/completeOrder" class="nav-link">
+                          <i class="nav-icon  fas fa-file"></i>
+                          <p>Order Completed</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url(); ?>Admin/cancelOrder" class="nav-link">
+                          <i class="nav-icon  fas fa-file"></i>
+                          <p>Order Cancelled</p>
                         </a>
                     </li>
                 </ul>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon rotat fas fa-thumbtack"></i>
-              <p>
-                Posts
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav-treeview">
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="nav-icon  fas fa-plus"></i>
-                  <p>Add New Post</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="nav-icon  fas fa-pen"></i>
-                  <p>Edit Posts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="nav-icon  fas fa-eye"></i>
-                  <p>View Posts</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+          
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon  fas fa-wrench"></i>
@@ -96,12 +80,7 @@
               </p>
             </a>
             <ul class="nav-treeview">
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="nav-icon  fas fa-cog"></i>
-                  <p>Site Settings</p>
-                </a>
-              </li>
+              
               <li class="nav-item">
                 <a href="" class="nav-link">
                   <i class="nav-icon  fas fa-key"></i>
