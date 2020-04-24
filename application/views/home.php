@@ -49,9 +49,15 @@ if(@$usedata) { ?>
 				<div class="row">
 					<div class="upl_sec">
 						<?php echo form_open_multipart('upload/do_upload');?>
+						<?php if($this->session->userdata("userId")) { ?>
 							<label for="uplImg" id="lbl">
 								<img src="<?= base_url(); ?>assets/images/site_img/cmp.png">
 							</label>
+						<?php }else{ ?>
+							<a href="<?= base_url(); ?>Login">
+								<img src="<?= base_url(); ?>assets/images/site_img/cmp.png">
+							</a>
+						<?php } ?>
 							<input type="file" name="ordImg" id="uplImg" accept="image/*" capture="camera">
 							<div class="uploadSec">
 								<div align="center">

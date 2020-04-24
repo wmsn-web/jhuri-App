@@ -21,4 +21,12 @@ class OrdStatus extends CI_controller
 		$rowsOrd = $getOrdr->row();
 		$this->load->view("ordstatus",["rowsOrd"=>$rowsOrd]);
 	}
+
+	function cancelOrd()
+	{
+		$id = $this->uri->segment(3);
+		$this->db->where("id",$id);
+		$this->db->update("orders",["status"=>"Cancelled"]);
+		return redirect("MyOrders");
+	}
 }

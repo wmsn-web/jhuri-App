@@ -30,8 +30,9 @@
 	    	 }
 	    	 else
 	    	 {
-	    	 	$img = "";
+	    	 	$img = base_url()."uploads/".$firstOne->images;
 	    	 }
+	    	 if($firstOne->status == "Cancelled"){$link = ""; $color= "style='color:#f00'";  }else{ $link = base_url()."OrdStatus/status/". $firstOne->order_id; $color ="style='color:#090'"; }
 	    	 ?>
 	    <div class="container">
 	    	<h4>My Orders</h4>
@@ -42,21 +43,35 @@
 	    				</div>
 	    				<div class="cl4 left20">
 	    					Order No: <?= $firstOne->order_id; ?><br><br>Date : <?= $firstOne->date; ?><br>
-	    					<a style="text-decoration: none;" href="<?= base_url(); ?>OrdStatus/status/<?= $firstOne->order_id; ?>">
+	    					<a style="text-decoration: none;" href="<?= $link; ?>">
+
 	    						<button class="bntmain">Check Order Status</button>
 	    				    </a>
+	    				    <span <?= $color; ?>><?= $firstOne->status; ?></span>
 	    				</div>
 	    			</div>
 	    		</div>
 	    		<h4 style="margin-top: 20px">My Past Orders</h4>
 	    		
 	    			
-	    				<?php foreach ($allOrders as $key) { ?>	    					
-		    				<div class="cards">
+	    				<?php foreach ($allOrders as $key) {
+	    					if($key->status == "Cancelled")
+	    						{
+	    							$link = ""; $back = "style='background:#f00; color:#fff'"; 
+	    							$txt = "Cancelled";
+	    						}
+	    						else
+	    						{ 
+	    							$link = base_url()."OrdStatus/status/". $key->order_id; 
+	    							$back = "";
+	    							$txt = "View Details";
+	    					    }
+	    				 ?>	    					
+		    				<div <?= $back; ?> class="cards">
 		    					<span class="charts"># <?= $key->order_id; ?></span>
 		    					<span class="chartsb">
-		    						<a style="text-decoration: none;" href="<?= base_url(); ?>OrdStatus/status/<?= $key->order_id; ?>">
-		    							<button>View Details</button>
+		    						<a style="text-decoration: none;" href="<?= $link; ?>">
+		    							<button  <?= $back; ?>><?= $txt; ?></button>
 		    						</a>
 		    					</span>
 		    				</div>

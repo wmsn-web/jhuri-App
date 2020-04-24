@@ -1,0 +1,4 @@
+.nav .nav-item .rotat{
+	-ms-transform: rotate(40deg); /* IE 9 */
+  transform: rotate(40deg);
+}

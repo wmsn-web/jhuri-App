@@ -145,15 +145,35 @@ class UserModel extends CI_model
 						"orders"  => $ordData,
 						"types"   => "list"
 					);
-		$q = $this->db->insert("orders",$data);
-		if($q)
+		$this->db->where("order_id",$orderId);
+		$get = $this->db->get("orders");
+		$num = $get->num_rows();
+		if($num == 0)
 		{
-			return "succ";
+			$q = $this->db->insert("orders",$data);
+			if($q)
+			{
+				return "succ";
+			}
+			else
+			{
+				return "failed";
+			}
 		}
 		else
 		{
-			return "failed";
+			$this->db->where("order_id",$orderId);
+			$q = $this->db->update("orders",$data);
+			if($q)
+			{
+				return "succ";
+			}
+			else
+			{
+				return "failed";
+			}
 		}
+			
 	}
 	function getAddres($userId)
 	{

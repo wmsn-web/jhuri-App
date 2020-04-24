@@ -931,6 +931,7 @@ function MenuEditor(idSelector, options) {
             var $div = $('<div>').css('margin-bottom', '5px');
             var $i = $('<i>').addClass(v.icon);
             var $span = $('<span>').addClass('txt').append(v.text);
+            //var $span = $('<span>').addClass('txt').html(v.text +"<span class='rght'>"+ v.title+"</span>");
             var $divbtn =  TButtonGroup();
             $div.append($i).append("&nbsp;").append($span).append($divbtn);
             $li.append($div);
@@ -1026,6 +1027,7 @@ function MenuEditor(idSelector, options) {
         return JSON.stringify(obj);
     };
 
+
     this.setData = function (strJson) {
         var arrayItem = (Array.isArray(strJson)) ? strJson : stringToArray(strJson);
         if (arrayItem !== null) {
@@ -1041,6 +1043,7 @@ function MenuEditor(idSelector, options) {
         }
     };
 };
+
 /* STATIC METHOD */
 /**
  * Update the buttons on the list. Only the buttons 'Up', 'Down', 'In', 'Out'

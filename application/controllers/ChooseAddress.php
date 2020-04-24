@@ -29,6 +29,8 @@ class ChooseAddress extends CI_controller
 		$compOrd = $this->UserModel->compOrd($orderId,$addrId,$desc);
 		if($compOrd == "succ")
 		{
+			$this->session->unset_userdata("ordJsons");
+			$this->session->unset_userdata("orderId");
 			return redirect("Success");
 		}
 	}

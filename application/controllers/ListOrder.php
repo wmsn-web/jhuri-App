@@ -17,6 +17,7 @@ class ListOrder extends CI_controller
 
 	function index()
 	{
+		
 		$this->load->view("listOrder");
 	}
 
@@ -28,11 +29,27 @@ class ListOrder extends CI_controller
 		$split = json_decode($json);
 		$itemChk = $this->UserModel->itemChkUpdt($split);
 		//print_r($split);
+		
 		$orderId = mt_rand(123456,999999);
+		if(isset($_GET['orderid']))
+		{
+			$orderd = $_GET['orderid'];
+			if($orderd =="")
+			{
+				$orderId = mt_rand(123456,999999);
+			}
+			else
+			{
+				$orderId = $_GET['orderid'];
+			}
+		}
+		$idOld = $_GET['orderid'];
 		$submitOrder = $this->UserModel->submitOrder($ordData,$userId,$orderId);
 		if($submitOrder == "succ")
 		{
-			return redirect("ChooseAddress/getAddr/$orderId");
+			$this->session->set_userdata(["ordJsons"=>$json,"orderId"=>$orderId]);
+			return redirect("ChooseAddress/getAddr/$orderId"); 
 		}
+		
 	}
 }

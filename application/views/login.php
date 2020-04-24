@@ -39,6 +39,7 @@
 	    			<button class="bntSec">Login</button>
 	    		</div>
 	    		<div align="center" class="form-group">
+	    			
 	    			<p>Don’t have an account ? <span class="reg">Sign Up</span></p>
 	    		</div>
     	    </form>
