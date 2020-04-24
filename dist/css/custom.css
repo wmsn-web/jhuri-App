@@ -2,3 +2,21 @@
 	-ms-transform: rotate(40deg); /* IE 9 */
   transform: rotate(40deg);
 }
+.bradecumb {
+	float: right;
+	color: #f00;
+}
+.bradecumb ul li
+{
+	list-style-type: none;
+	display: inline-block;
+}
+.cards
+{
+	width:100%;
+	padding: 10px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    margin-top: 15px;
+}

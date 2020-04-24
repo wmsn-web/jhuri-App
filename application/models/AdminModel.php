@@ -19,4 +19,58 @@ class AdminModel extends CI_model
 			return false;
 		}
 	}
+
+	function getNewOrder()
+	{
+		$this->db->where("status","submitted");
+		$get = $this->db->get("orders");
+		return $get;
+	}
+
+	function getprocOrder()
+	{
+		$this->db->where("status","Confirm");
+		$this->db->or_where("status","Processing");
+		$get = $this->db->get("orders");
+		return $get;
+	}
+
+	function getcompOrder()
+	{
+		$this->db->where("status","Completed");
+		$get = $this->db->get("orders");
+		return $get;
+	}
+
+	function getCancelOrder()
+	{
+		$this->db->where("status","Cancelled");
+		$get = $this->db->get("orders");
+		return $get;
+	}
+
+	function getDetails($id)
+	{
+		$this->db->where("order_id",$id);
+		$get = $this->db->get("orders");
+		$row = $get->row();
+		$adress_id = $row->address_id;
+		$this->db->where("id",$adress_id);
+		$getAd = $this->db->get("user_address");
+		$rowAd = $getAd->row();
+
+			$dataAll = array
+			(
+				"orderId" => $row->order_id,
+				"userId" => $row->user_id,
+				"adress" => $rowAd->name."<br>".$rowAd->address."<br>".$rowAd->city.",".$rowAd->pin,
+				"orders" => html_entity_decode($row->orders),
+				"images" => $row->images,
+				"types" => $row->types,
+				"status" => $row->status,
+				"description" => $row->description
+			);
+
+			return $dataAll;
+	}
 }
