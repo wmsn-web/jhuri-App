@@ -56,15 +56,7 @@
 							</span>
 					    </a>
 					</li>
-					<li>
-						<a href="#">
-							<img src="<?= base_url(); ?>assets/images/icons/pets.png" />
-							Kitchen, Garder & Pets
-							<span>
-								<i class="fas fa-angle-down"></i>
-							</span>
-					    </a>
-					</li>
+					
 					<li>
 						<a href="#">
 							<img src="<?= base_url(); ?>assets/images/icons/egg.png" />

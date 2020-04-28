@@ -14,7 +14,9 @@
 				</div>
 				<div class="logo cl2">
 					<div align="center">
+						<a href="<?= base_url(); ?>">
 						<img src="<?= base_url(); ?>assets/images/site_img/logo.png" alt="img" align="center" />
+					</a>
 					</div>
 				</div>
 				<div class="notice cl3">
@@ -62,7 +64,10 @@
 	    				</div>
 	    			</div>
 	    			<div style="margin-top: 35px" align="center">
-		    		<button class="bntSec3">Contunue</button><br><br><br>
+	    				<?php if($numAdres==0){
+
+	    				}else{ ?>
+		    		<button class="bntSec3">Contunue</button><br><br><br> <?php } ?>
 		    		<a href="<?= base_url(); ?>AddAddress/?order=<?= $orderId; ?>" class="bntSec4">Add New Address</a>
 		    		<?= br(3); ?>
 	        </div>

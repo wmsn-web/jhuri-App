@@ -17,7 +17,8 @@ class ChooseAddress extends CI_controller
 		$getAddrs = $this->UserModel->getAddres($userId);
 		$orderId = $this->uri->segment(3);
 		$adres = $getAddrs->result();
-		$this->load->view("getAddress",["orderId"=>$orderId,"adres"=>$adres]);
+		$numAdres = $getAddrs->num_rows();
+		$this->load->view("getAddress",["orderId"=>$orderId,"adres"=>$adres,"numAdres"=>$numAdres]);
 	}
 
 	function completeOrder()

@@ -68,9 +68,34 @@ class AdminModel extends CI_model
 				"images" => $row->images,
 				"types" => $row->types,
 				"status" => $row->status,
+				"price" => $row->price,
+				"invoice" => $row->order_img,
 				"description" => $row->description
 			);
 
 			return $dataAll;
 	}
+	function getGalleryAll(){
+		$this->db->order_by("id","DESC");
+		$q = $this->db->get("gallery");
+		return $q;
+	}
+	function getGallery($proname){
+		$this->db->where("product_name",$proname);
+		$this->db->order_by("id","DESC");
+		$q = $this->db->get("gallery");
+		return $q;
+	}
+
+	function UploadGallery($proname,$image)
+	{
+		$data = array
+		(
+			"product_name"=>$proname,
+			"images"=>$image
+		);
+
+		$insrt = $this->db->insert("gallery",$data);
+	}
+	
 }

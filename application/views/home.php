@@ -38,12 +38,12 @@ if(@$usedata) { ?>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="input-group">
+						<!---div class="input-group">
 							<span class="input-group-addon">
 		        				<i class="fas fa-search"></i>
 		    				</span>
 		    				<input type="text" class="form-control srch" placeholder="Search Products" />
-						</div>
+						</div--->
 					</div>
 				</div>
 				<div class="row">
@@ -88,15 +88,20 @@ if(@$usedata) { ?>
 						<img src="<?= base_url(); ?>assets/images/site_img/Rectangle_31.png">
 					</div>
 					<div class="conticn cl5">
-						<img src="<?= base_url(); ?>assets/images/site_img/msnger.png"><br><br>
-						<img src="<?= base_url(); ?>assets/images/site_img/whtsp.png">
+						<a href="tel:+919735151074">
+							<img src="<?= base_url(); ?>assets/images/site_img/call.png">
+						</a>
+						<br><br>
+						<a href="https://api.whatsapp.com/send?phone=9735151074&text=I%20want%20to%20make%20an%20order%20">
+							<img src="<?= base_url(); ?>assets/images/site_img/whtsp.png">
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="gal">
 			<div class="cat_gal">
-				<h3>Category <span>See All</span></h3>
+				<h3>Category <span>See All</span></h3><br>
 				<div class="row">
 					<div class="galdv cl6">
 						<img class="catImg" src="<?= base_url(); ?>assets/images/site_img/gal/1.png" />
@@ -133,7 +138,7 @@ if(@$usedata) { ?>
 
 
 			<div class="cat_gal">
-				<h3>Category <span>See All</span></h3>
+				
 				<div class="row">
 					<div class="galdv cl6">
 						<img class="catImg" src="<?= base_url(); ?>assets/images/site_img/gal/1.png" />
@@ -151,7 +156,7 @@ if(@$usedata) { ?>
 			</div>
 
 			<div class="cat_gal">
-				<h3>Category <span>See All</span></h3>
+				
 				<div class="row">
 					<div class="galdv cl6">
 						<img class="catImg" src="<?= base_url(); ?>assets/images/site_img/gal/1.png" />
@@ -169,7 +174,7 @@ if(@$usedata) { ?>
 			</div>
 
 			<div class="cat_gal">
-				<h3>Category <span>See All</span></h3>
+				
 				<div class="row">
 					<div class="galdv cl6">
 						<img class="catImg" src="<?= base_url(); ?>assets/images/site_img/gal/1.png" />
@@ -187,7 +192,7 @@ if(@$usedata) { ?>
 			</div>
 
 			<div class="cat_gal">
-				<h3>Category <span>See All</span></h3>
+				
 				<div class="row">
 					<div class="galdv cl6">
 						<img class="catImg" src="<?= base_url(); ?>assets/images/site_img/gal/1.png" />

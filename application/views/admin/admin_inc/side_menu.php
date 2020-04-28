@@ -80,6 +80,12 @@
               </p>
             </a>
             <ul class="nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url(); ?>Admin/AddGallery" class="nav-link">
+                  <i class="nav-icon  fas fa-key"></i>
+                  <p>Upload Gallery</p>
+                </a>
+              </li>
               
               <li class="nav-item">
                 <a href="" class="nav-link">
@@ -88,7 +94,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?= base_url(); ?>Admin/logout" class="nav-link">
                   <i class="nav-icon  fas fa-sign-out-alt"></i>
                   <p>logout</p>
                 </a>

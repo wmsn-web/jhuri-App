@@ -13,7 +13,9 @@
 				</div>
 				<div class="logo cl2">
 					<div align="center">
+						<a href="<?= base_url(); ?>">
 						<img src="<?= base_url(); ?>assets/images/site_img/logo.png" alt="img" align="center" />
+					</a>
 					</div>
 				</div>
 				<div class="notice cl3">

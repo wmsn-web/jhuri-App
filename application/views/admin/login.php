@@ -13,6 +13,10 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
+      <?php if($feed = $this->session->flashdata("Feed")) { ?>
+
+        <p style="color: #F00"><?= $feed; ?></p>
+      <?php } ?>
       <p class="login-box-msg">Sign in to start your session</p>
 
       <form action="<?= base_url(); ?>Admin/processLogin" method="post">

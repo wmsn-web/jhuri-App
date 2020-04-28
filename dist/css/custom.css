@@ -20,3 +20,15 @@
     opacity: 1;
     margin-top: 15px;
 }
+.flash
+{
+	position: absolute;
+	top: 65px;
+	right: 0;
+	width: 450px;
+	background-image: linear-gradient(90deg, #8700FF, #FF00DC);
+	padding: 8px;
+	color: #FFFFFF;
+	border-radius: 4px;
+	z-index: 999;
+}
