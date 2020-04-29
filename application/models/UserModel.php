@@ -1,5 +1,5 @@
 <?php
-/**
+/** 
  * 
  */
 class UserModel extends CI_model

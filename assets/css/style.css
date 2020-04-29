@@ -1046,6 +1046,28 @@ margin-top: 15px;
 	background: #FFFFFF; color:#090;
 	font-size: 18px;
 }
+/*=============New=============*/
+#pop
+{
+	width: 100%;
+	position: fixed;
+	top: 110px;
+	left: 0;
+	z-index: 999;
+	display: none;
+}
+.bgGrn
+{
+	color: #fff;
+	background: #00CA03;
+	font-size: 16px;
+}
+.bgGrn span
+{
+	padding: 0;
+	float: right;
+	font-size: 18px;
+}
 
 /*
 @media only screen and (max-height: 568px) {

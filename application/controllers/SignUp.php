@@ -24,7 +24,7 @@ class SignUp extends CI_controller
 		{
 			$this->session->set_userdata("userId",$phone);
 			$this->session->set_flashdata("Feed","Account Created. Please Login Now");
-			return redirect("login");
+			return redirect("profile");
 		}
 		else
 		{

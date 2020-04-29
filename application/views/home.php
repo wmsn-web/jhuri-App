@@ -85,7 +85,7 @@ if(@$usedata) { ?>
 				</div>
 				<div class="row">
 					<div class="cont cl4">
-						<img src="<?= base_url(); ?>assets/images/site_img/Rectangle_31.png">
+						<img id="htiwrk" src="<?= base_url(); ?>assets/images/site_img/Rectangle_31.png">
 					</div>
 					<div class="conticn cl5">
 						<a href="tel:+919735151074">
@@ -209,6 +209,27 @@ if(@$usedata) { ?>
 			    </div>
 			</div>
 		</section>
+	</div>
+	<div id="pop">
+		<div class="container-fluid">
+			<div class="cards bgGrn">
+				<span id="cls">&times;</span><br>
+				<h3>How its work?</h3>
+				<h4>What kind of products can I get at my doorstep?</h4>
+				<p>How does "anything you want" sound? We have 5000+ products across food, personal care, household & other categories.</p>
+
+				<p>step 1. Click a photo of your order list and just upload it with additional description and confirm. quick and simple.<br>
+				or </p>
+				<p>List your order and submit and confirm.
+				or just WhatsApp us with your order list.</p>
+
+				<p>Step 2. our representative will call you and verify the order list and you can track your order.</p>
+
+				<p>Step 3. get your order at your doorstep quickly as never before without any delivery charges.</p>
+
+				<p>Step 4. Pay when you receive your order with the seller invoice.<p>
+			</div>
+		</div>
 	</div>
 	<!---=================Foot Menu==========------------>
 	<?php include("inc/foot_menu.php"); ?>

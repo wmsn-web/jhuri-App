@@ -12,7 +12,7 @@
 					    </a>
 					</div>
 				</div>
-				<div class="notice cl3">
+				<div class="notice cl3"> 
 					<div align="right">
 						<i class="fas fa-bell"></i>
 						<i class="fas fa-filter"></i>
@@ -23,7 +23,7 @@
 	</div>
 </div>
 <section class="side_menu">
-	<div class="addr">
+	<div class="addr"> 
 		<span>Delivery Address:</span>
 		<div class="row">
 			<div class="cl15 marks">
@@ -33,12 +33,12 @@
 			<div class="cl75">
 				<ul>
 					<li>
-						Anandapur Main Road, East Kolkata, 100007
+						<?= $addr; ?>
 					</li>
 					
 		        </ul>
 			</div>
-			<div class="cl10 marks-right">
+			<div onClick="location.href='<?= base_url(); ?>Profile'" class="cl10 marks-right">
 				<i class="glyphicon glyphicon-pencil"></i>
 			</div>
 		</div>

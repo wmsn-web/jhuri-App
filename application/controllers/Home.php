@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * 
  */
@@ -20,18 +20,36 @@ class Home extends CI_controller
 			$num = $appData->num_rows();
 			if($num == 0)
 			{
-				$this->load->view("home");	
+				$this->load->view("home",["addr"=>"No Address Please Login"]);	
 			}
 
 			else
 			{
+				
+			    $getAddrData = $this->UserModel->getAddrData($userId);
 				$res = $appData->result();
-				$this->load->view("home",["usedata" => $res]);
+				$this->load->view("home",["usedata" => $res,"addr"=>"No Address Please Login"]);
 			}
 		}
 		else
 		{
-			$this->load->view("home");	
+			$userId = $this->session->userdata("userId");
+			$getAddrData = $this->UserModel->getAddrData($userId);
+			$nums = $getAddrData->num_rows();
+			$row = $getAddrData->row();
+			if($nums==0){
+				$addrs ="";
+				$city = "";
+				$pin = "";
+				$addr ="Address Not Found";
+			}else{
+				
+				$addrs = $row->address;
+				$city = $row->city;
+				$pin = $row->pin;
+				$addr = $addrs.",".$city.",".$pin;
+			}
+			$this->load->view("home",["addr"=>$addr]);	
 		}
 		
 

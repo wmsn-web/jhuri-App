@@ -108,6 +108,13 @@
         $("body").click(function(){
           $(".flashof").fadeOut(500);
         });
+
+        $("#htiwrk").click(function(){
+          $("#pop").show(200);
+        });
+        $("#cls").click(function(){
+          $("#pop").hide(200);
+        });
     });
 
     $(".phn").click(function(){
